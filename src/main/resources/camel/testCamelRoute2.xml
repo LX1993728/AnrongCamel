@@ -1,0 +1,6 @@
+<routes xmlns="http://camel.apache.org/schema/spring">
+    <route id="test2">
+        <from uri="direct:flow2"/>
+        <to uri="log:测试2"/>
+    </route>
+</routes>

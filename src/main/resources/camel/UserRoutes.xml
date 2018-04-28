@@ -1,0 +1,9 @@
+<routes xmlns="http://camel.apache.org/schema/spring">
+<route id="test">
+    <from uri="direct:flow111"/>
+    <setBody>
+        <constant>123456789</constant>
+    </setBody>
+    <to uri="log:日志输出"/>
+</route>
+</routes>

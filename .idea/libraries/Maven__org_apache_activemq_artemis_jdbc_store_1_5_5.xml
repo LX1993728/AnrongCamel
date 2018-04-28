@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.activemq:artemis-jdbc-store:1.5.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/maven_repository/repository/org/apache/activemq/artemis-jdbc-store/1.5.5/artemis-jdbc-store-1.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/maven_repository/repository/org/apache/activemq/artemis-jdbc-store/1.5.5/artemis-jdbc-store-1.5.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/maven_repository/repository/org/apache/activemq/artemis-jdbc-store/1.5.5/artemis-jdbc-store-1.5.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

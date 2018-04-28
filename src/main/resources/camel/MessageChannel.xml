@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ 消息通道的使用
+-->
+
+  <!--<camelContext id="myCamel" xmlns="http://camel.apache.org/schema/spring">-->
+<routes xmlns="http://camel.apache.org/schema/spring">
+
+    <route id="x">
+      <from uri="file:target/inbox"/>
+      <log message="Sending file ${file:name} to Artemis"/>
+      <to uri="jms:queue:data"/>
+      <log message="Finish sending file to Artemis"/>
+    </route>
+
+    <!-- turn on stream caching so we can stream big messages from Artemis
+         to spool disk to avoid reading into memory -->
+    <route streamCache="true" id="y">
+      <from uri="jms:queue:data"/>
+      <log message="Received data from Artemis"/>
+      <to uri="file:target/outbox"/>
+      <log message="Finish saving data from Artemis as file"/>
+    </route>
+</routes>
+  <!--</camelContext>-->

@@ -1,0 +1,9 @@
+<routes xmlns="http://camel.apache.org/schema/spring">
+    <route id="test3">
+        <from uri="jetty:http://0.0.0.0:9080/camel"/>
+        <to uri="log:jetty"/>
+        <setBody>
+            <constant>12345</constant>
+        </setBody>
+    </route>
+</routes>
