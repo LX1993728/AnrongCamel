@@ -17,9 +17,13 @@ public class RestDSLConfig {
         restConfiguration.setHost("localhost");
         restConfiguration.setPort(8044);
         restConfiguration.setEnableCORS(true);
-        restConfiguration.setBindingMode(RestConfiguration.RestBindingMode.auto);
+        restConfiguration.setBindingMode(RestConfiguration.RestBindingMode.json);
         restConfiguration.setApiHost("localhost");
         restConfiguration.setApiContextPath("/api-doc");
+
+        Map<String,Object> dataFormatPropMap = new HashMap<>();
+        dataFormatPropMap.put("prettyPrint","true");
+        restConfiguration.setDataFormatProperties(dataFormatPropMap);
 
         Map<String,Object> apiProMap = new HashMap<>();
         apiProMap.put("api.title", "User API");
